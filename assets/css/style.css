@@ -37,12 +37,13 @@ body::-webkit-scrollbar-thumb {
     background-position-x: center;
 }
 
+
+/*HEADER-HOME*/
+
 #header2 {
     width: 100%;
     height: 150px;
-    margin-top: 40px;
-    position: fixed;
-    z-index: 1;
+    margin-top: 20px;
 }
 
 .container__header {
@@ -51,7 +52,6 @@ body::-webkit-scrollbar-thumb {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    background-color: #FF784E;
 }
 
 .logo {
@@ -86,6 +86,76 @@ body::-webkit-scrollbar-thumb {
     display: none;
 }
 
+/*HEADER-HOME*/
+
+/*SECTION1-HOME*/
+
+.section1 {
+    width: 100%;
+    height: 700px;
+}
+
+.section1 .cover {
+    max-width: 1440px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section1 .text {
+    max-width: 500px;
+    text-align: center;
+}
+
+.section1 .text h3 {
+    font-family: "LibreBaskerville-Bold";
+    color: #1db8de;
+    font-size: 24px;
+}
+
+.section1 .text h2 {
+    font-family: "LibreBaskerville-Bold";
+    color:#3e3f43;
+    font-size: 90px;
+}
+
+.section1 .text p {
+    color: #3e3f43;
+    font-size: 26px;
+    font-family: "LibreBaskerville-Regular";
+}
+
+.section1 .text input {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 40px;
+    margin-top: 40px;
+    background: linear-gradient(to right, #b2fafa, #1db8de);
+    color: #FFFFFF;
+    box-shadow: 1px 1px 30px -12px #5AEBFF;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.section1 .text input:hover {
+    box-shadow: 1px 1px 30px -6px #5AEBFF;
+}
+
+.section1 .pic img {
+    width: 500px;
+}
+
+.section1 .pic img:hover {
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+/*SECTION1-HOME*/
 
 .section-ceviche {
     height: 600px;
