@@ -68,13 +68,25 @@ body::-webkit-scrollbar-thumb {
     width: 150px;
 }
 
-.nav a {
+nav {
+    line-height: 50px;
+}
+
+nav a {
     color: #FFFFFF;
     font-family: "Inter-SemiBold";
     font-size: 18px;
     text-decoration: none;
     display: inline-block;
     padding: 10px 15px;
+    transition: 100ms;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #3e3f43;
+    background-color: #FFFFFF;
+    border-radius: 50px;
 }
 
 .home-header {
@@ -361,12 +373,12 @@ a {
     width: 150px;
 }
 
-nav {
+.menu-nav {
     float: right;
     line-height: 100px;
 }
 
-nav a {
+.menu-nav a {
     color: #FFFFFF;
     font-family: "Inter-SemiBold";
     font-size: 18px;
