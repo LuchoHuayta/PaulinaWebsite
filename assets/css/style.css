@@ -37,6 +37,10 @@ body::-webkit-scrollbar-thumb {
     background-position-x: center;
 }
 
+#menu__body {
+    background-color: #3e3f43;
+}
+
 @media screen and (max-width: 1200px) {
     #index__body {
         background: none;
@@ -487,48 +491,92 @@ footer a {
 
 /*FOOTER--END*/
 
+/*HEADER-MENU--START*/
 
-
-
-
-.menu-header {
-    background-color: #3e3f43;
+#header1 {
     width: 100%;
-    height: 200px;
+    height: 150px;
+    margin-top: 20px;
+    background-color: #3e3f43;
 }
 
-.menu-header h1 {
+.container__header {
+    max-width: 1440px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
     display: none;
 }
 
-.container-header {
-    width: 95%;
-    margin: auto;
+.logo img {
+    width: 125px;
 }
 
-.logo-header {
-    float: left;
-    line-height: 100px;
+nav {
+    line-height: 50px;
 }
 
-.logo-header img {
-    width: 150px;
-}
-
-.menu-nav {
-    float: right;
-    line-height: 100px;
-}
-
-.menu-nav a {
+nav a {
     color: #FFFFFF;
     font-family: "Inter-SemiBold";
     font-size: 18px;
     text-decoration: none;
     display: inline-block;
     padding: 10px 15px;
+    transition: 100ms;
 }
 
+nav a:hover {
+    text-decoration: underline;
+    color: #3e3f43;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+}
+
+.home-header {
+    width: 100%;
+    height: 200px;
+}
+
+.home-header h1 {
+    display: none;
+}
+
+#burger {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #header1 {
+        margin-top: 1px;
+    }
+
+    .container__header {
+        align-items: center;
+    }
+    
+    nav a {
+        display: none;
+    }
+
+    #burger {
+        display: block;
+        fill: #FFFFFF;
+    }
+}
+
+/*HEADER-MENU--END*/
 
 
 
@@ -539,7 +587,7 @@ footer a {
 
 
 
-
+/*A partir de aca codigo para reordenar, es todo sobre menu.html con flex y grid*/
 
 
 
