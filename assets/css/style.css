@@ -107,7 +107,7 @@ nav a:hover {
     display: none;
 }
 
-#burger {
+.burger {
     display: none;
 }
 
@@ -125,7 +125,7 @@ nav a:hover {
         display: none;
     }
 
-    #burger {
+    #header2 .burger {
         display: block;
         fill: #3e3f43;
     }
@@ -552,7 +552,7 @@ nav a:hover {
     display: none;
 }
 
-#burger {
+.burger {
     display: none;
 }
 
@@ -570,7 +570,7 @@ nav a:hover {
         display: none;
     }
 
-    #burger {
+    #header1 .burger {
         display: block;
         fill: #FFFFFF;
     }
