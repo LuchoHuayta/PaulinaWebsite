@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-$colors: (
-    logo: #1db8de,
+$colors: (logo: #1db8de,
     negro: #3e3f43,
     pollo: #FFD84E,
     carne: #FF784E,
@@ -14,7 +13,7 @@ $colors: (
     veggie: #A4FF84,
 );
 
-@mixin flexible( $dis , $direccion , $corte , $just , $align) {
+@mixin flexible($dis, $direccion, $corte, $just, $align) {
     display: $dis;
     flex-flow: $direccion $corte;
     justify-content: $just;
@@ -23,13 +22,13 @@ $colors: (
 
 body::-webkit-scrollbar {
     width: 8px;
-    background-color: $negro;
+    background-color: #3e3f43;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #FFFFFF;
     border-radius: 10px;
-    border-right: 1px solid $negro;
+    border-right: 1px solid #3e3f43;
 }
 
 @font-face {
@@ -55,7 +54,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #menu__body {
-    background-color: $negro;
+    background-color: #3e3f43;
 }
 
 @media screen and (max-width: 1200px) {
@@ -75,11 +74,11 @@ body::-webkit-scrollbar-thumb {
         max-width: 1440px;
         height: 100%;
         margin: auto;
-        @include flexible( flex , row , wrap , space-between , center );
+        @include flexible(flex, row, wrap, space-between, center);
 
         .logo {
             height: 100%;
-            @include flexible( flex , row , wrap , flex-start , center );
+            @include flexible(flex, row, wrap, flex-start, center);
 
             h1 {
                 display: none;
@@ -105,7 +104,7 @@ body::-webkit-scrollbar-thumb {
 
             a:hover {
                 text-decoration: underline;
-                color: $negro;
+                color: #3e3f43;
                 background-color: #FFFFFF;
                 border-radius: 50px;
             }
@@ -129,10 +128,10 @@ body::-webkit-scrollbar-thumb {
                 a {
                     display: none;
                 }
-                
+
                 .burger {
                     display: block;
-                    fill: $negro;
+                    fill: #3e3f43;
                 }
             }
         }
@@ -151,60 +150,61 @@ body::-webkit-scrollbar-thumb {
         max-width: 1440px;
         height: 100%;
         margin: auto;
-        @include flexible( flex , row , nowrap , space-evenly , center );
+        @include flexible(flex, row, nowrap, space-evenly, center);
 
         .text {
             max-width: 500px;
             text-align: center;
+
+            h3 {
+                font-family: "LibreBaskerville-Bold";
+                color: #1db8de;
+                font-size: 24px;
+            }
+
+            h2 {
+                font-family: "LibreBaskerville-Bold";
+                color: #3e3f43;
+                font-size: 90px;
+            }
+
+            p {
+                color: #3e3f43;
+                font-size: 26px;
+                font-family: "LibreBaskerville-Regular";
+            }
+
+            input {
+                padding: 10px 40px;
+                border: none;
+                border-radius: 40px;
+                margin-top: 40px;
+                background: linear-gradient(to right, #b2fafa, #1db8de);
+                color: #FFFFFF;
+                box-shadow: 1px 1px 30px -12px #5AEBFF;
+                cursor: pointer;
+                transition: all 300ms;
+            }
+
+            input:hover {
+                box-shadow: 1px 1px 30px -6px #5AEBFF;
+            }
+        }
+
+        .pic {
+
+            img {
+                width: 500px;
+            }
+
+            img:hover {
+                animation: spin 20s linear infinite;
+            }
         }
     }
 }
 
 
-
-
-
-.section1 .text h3 {
-    font-family: "LibreBaskerville-Bold";
-    color: $logo;
-    font-size: 24px;
-}
-
-.section1 .text h2 {
-    font-family: "LibreBaskerville-Bold";
-    color: $negro;
-    font-size: 90px;
-}
-
-.section1 .text p {
-    color: $negro;
-    font-size: 26px;
-    font-family: "LibreBaskerville-Regular";
-}
-
-.section1 .text input {
-    padding: 10px 40px;
-    border: none;
-    border-radius: 40px;
-    margin-top: 40px;
-    background: linear-gradient(to right, #b2fafa, #1db8de);
-    color: #FFFFFF;
-    box-shadow: 1px 1px 30px -12px #5AEBFF;
-    cursor: pointer;
-    transition: all 300ms;
-}
-
-.section1 .text input:hover {
-    box-shadow: 1px 1px 30px -6px #5AEBFF;
-}
-
-.section1 .pic img {
-    width: 500px;
-}
-
-.section1 .pic img:hover {
-    animation: spin 20s linear infinite;
-}
 
 @keyframes spin {
     100% {
@@ -214,28 +214,35 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 1200px) {
 
-    .section1 .cover {
-        flex-direction: column;
-    }
+    .section1 {
 
-    .section1 .text h2 {
-        font-size: 60px;
-    }
+        .cover {
+            flex-direction: column;
 
-    .section1 .text h3 {
-        font-size: 20px;
-    }
+            .text {
+                h2 {
+                    font-size: 60px;
+                }
 
-    .section1 .text p {
-        display: none;
-    }
+                h3 {
+                    font-size: 20px;
+                }
 
-    .section1 .text input {
-        margin-top: 10px;
-    }
+                p {
+                    display: none;
+                }
 
-    .section1 .pic img {
-        width: 400px;
+                input {
+                    margin-top: 10px;
+                }
+            }
+
+            .pic {
+                img {
+                    width: 400px;
+                }
+            }
+        }
     }
 }
 
@@ -244,11 +251,11 @@ body::-webkit-scrollbar-thumb {
 /*SECTION2-HOME--START*/
 
 .section2 {
-    background-color: $negro;
+    background-color: #3e3f43;
 }
 
 .section2 .container {
-    @include flexible( flex , row , nowrap , space-evenly , center );
+    @include flexible(flex, row, nowrap, space-evenly, center);
 }
 
 .section2-img {
@@ -268,60 +275,58 @@ body::-webkit-scrollbar-thumb {
     height: 700px;
     background-image: url(./../images/backgroundOrange.jpg);
     background-position: center;
-}
 
-.section3 .cover {
-    max-width: 1440px;
-    height: 100%;
-    margin: auto;
-    @include flexible( flex , row , nowrap , space-evenly , center );
-}
+    .cover {
+        max-width: 1440px;
+        height: 100%;
+        margin: auto;
+        @include flexible(flex, row, nowrap, space-evenly, center);
 
-.section3 .text {
-    max-width: 500px;
-    text-align: center;
-}
+        .pic {
+            img {
+                width: 500px;
+            }
+        }
 
-.section3 .text h3 {
-    font-family: "LibreBaskerville-Bold";
-    color: $carne;
-    font-size: 24px;
-}
+        .text {
+            max-width: 500px;
+            text-align: center;
 
-.section3 .text h2 {
-    font-family: "LibreBaskerville-Bold";
-    color: $negro;
-    font-size: 90px;
-}
+            h3 {
+                font-family: "LibreBaskerville-Bold";
+                color: #FF784E;
+                font-size: 24px;
+            }
 
-.section3 .text p {
-    color: $negro;
-    font-size: 26px;
-    font-family: "LibreBaskerville-Regular";
-}
+            h2 {
+                font-family: "LibreBaskerville-Bold";
+                color: #3e3f43;
+                font-size: 90px;
+            }
 
-.section3 .text input {
-    padding: 10px 40px;
-    border: none;
-    border-radius: 40px;
-    margin-top: 40px;
-    background: linear-gradient(to left, #fabaa6, #FF784E);
-    color: #FFFFFF;
-    box-shadow: 1px 1px 30px -12px #fabaa6;
-    cursor: pointer;
-    transition: all 300ms;
-}
+            p {
+                color: #3e3f43;
+                font-size: 26px;
+                font-family: "LibreBaskerville-Regular";
+            }
 
-.section3 .text input:hover {
-    box-shadow: 1px 1px 30px -6px #fabaa6;
-}
+            input {
+                padding: 10px 40px;
+                border: none;
+                border-radius: 40px;
+                margin-top: 40px;
+                background: linear-gradient(to left, #fabaa6, #FF784E);
+                color: #FFFFFF;
+                box-shadow: 1px 1px 30px -12px #fabaa6;
+                cursor: pointer;
+                transition: all 300ms;
+            }
 
-.section3 .pic img {
-    width: 500px;
-}
-
-.section3 .pic img:hover {
-    animation: spin 20s linear infinite;
+            input:hover {
+                box-shadow: 1px 1px 30px -6px #fabaa6;
+            }
+        }
+    }
 }
 
 @keyframes spin {
@@ -334,30 +339,34 @@ body::-webkit-scrollbar-thumb {
 
     .section3 {
         background-image: none;
-    }
 
-    .section3 .cover {
-        flex-direction: column;
-    }
+        .cover {
+            flex-direction: column;
 
-    .section3 .text h2 {
-        font-size: 60px;
-    }
+            .pic {
+                img {
+                    width: 400px;
+                }
+            }
 
-    .section3 .text h3 {
-        font-size: 20px;
-    }
+            .text {
+                h2 {
+                    font-size: 60px;
+                }
 
-    .section3 .text p {
-        display: none;
-    }
+                h3 {
+                    font-size: 20px;
+                }
 
-    .section3 .text input {
-        margin-top: 10px;
-    }
+                p {
+                    display: none;
+                }
 
-    .section3 .pic img {
-        width: 400px;
+                input {
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 }
 
@@ -370,60 +379,58 @@ body::-webkit-scrollbar-thumb {
     height: 700px;
     background-image: url(./../images/backgroundYellow.jpg);
     background-position: center;
-}
 
-.section5 .cover {
-    max-width: 1440px;
-    height: 100%;
-    margin: auto;
-    @include flexible( flex , row , nowrap , space-evenly , center );
-}
+    .cover {
+        max-width: 1440px;
+        height: 100%;
+        margin: auto;
+        @include flexible(flex, row, nowrap, space-evenly, center);
 
-.section5 .text {
-    max-width: 500px;
-    text-align: center;
-}
+        .text {
+            max-width: 500px;
+            text-align: center;
 
-.section5 .text h3 {
-    font-family: "LibreBaskerville-Bold";
-    color: $pollo;
-    font-size: 24px;
-}
+            h3 {
+                font-family: "LibreBaskerville-Bold";
+                color: #FFD84E;
+                font-size: 24px;
+            }
 
-.section5 .text h2 {
-    font-family: "LibreBaskerville-Bold";
-    color: $negro;
-    font-size: 90px;
-}
+            h2 {
+                font-family: "LibreBaskerville-Bold";
+                color: #3e3f43;
+                font-size: 90px;
+            }
 
-.section5 .text p {
-    color: $negro;
-    font-size: 26px;
-    font-family: "LibreBaskerville-Regular";
-}
+            p {
+                color: #3e3f43;
+                font-size: 26px;
+                font-family: "LibreBaskerville-Regular";
+            }
 
-.section5 .text input {
-    padding: 10px 40px;
-    border: none;
-    border-radius: 40px;
-    margin-top: 40px;
-    background: linear-gradient(to right, #ffeca7, #FFD84E);
-    color: $negro;
-    box-shadow: 1px 1px 30px -12px #ffeca7;
-    cursor: pointer;
-    transition: all 300ms;
-}
+            input {
+                padding: 10px 40px;
+                border: none;
+                border-radius: 40px;
+                margin-top: 40px;
+                background: linear-gradient(to right, #ffeca7, #FFD84E);
+                color: #3e3f43;
+                box-shadow: 1px 1px 30px -12px #ffeca7;
+                cursor: pointer;
+                transition: all 300ms;
+            }
 
-.section5 .text input:hover {
-    box-shadow: 1px 1px 30px -6px #ffeca7;
-}
+            input:hover {
+                box-shadow: 1px 1px 30px -6px #ffeca7;
+            }
+        }
 
-.section5 .pic img {
-    width: 500px;
-}
-
-.section5 .pic img:hover {
-    animation: spin 20s linear infinite;
+        .pic {
+            img {
+                width: 500px;
+            }
+        }
+    }
 }
 
 @keyframes spin {
@@ -436,30 +443,31 @@ body::-webkit-scrollbar-thumb {
 
     .section5 {
         background-image: none;
-    }
 
-    .section5 .cover {
-        flex-direction: column;
-    }
+        .cover {
+            flex-direction: column;
 
-    .section5 .text h2 {
-        font-size: 60px;
-    }
+            .text {
+                h2 {
+                    font-size: 60px;
+                }
+                h3 {
+                    font-size: 20px;
+                }
+                p {
+                    display: none;
+                }
+                input {
+                    margin-top: 10px;
+                }
+            }
 
-    .section5 .text h3 {
-        font-size: 20px;
-    }
-
-    .section5 .text p {
-        display: none;
-    }
-
-    .section5 .text input {
-        margin-top: 10px;
-    }
-
-    .section5 .pic img {
-        width: 400px;
+            .pic {
+                img {
+                    width: 400px;
+                }
+            }
+        }
     }
 }
 
@@ -468,32 +476,32 @@ body::-webkit-scrollbar-thumb {
 /*FOOTER--START*/
 
 footer {
-    background-color: $negro;
+    background-color: #3e3f43;
     width: 100%;
-}
 
-h6 {
-    color: #FFFFFF;
-    font-size: small;
-}
+    .footer-container {
+        width: 75%;
+        margin: auto;
+        color: #FFFFFF;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        @include flexible(flex, row, nowrap, space-around, flex-start);
+        font-size: small;
 
-footer a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
+        div {
+            @include flexible(flex, column, nowrap, flex-start, flex-start);
 
-.footer-container {
-    width: 75%;
-    margin: auto;
-    color: #FFFFFF;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    @include flexible( flex , row , nowrap , space-around , flex-start );
-    font-size: small;
-}
+            h6 {
+                color: #FFFFFF;
+                font-size: small;
+            }
 
-.footer-container div {
-    @include flexible( flex , column , nowrap , flex-start , flex-start );
+            a {
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+        }
+    }
 }
 
 /*FOOTER--END*/
@@ -505,83 +513,73 @@ footer a {
 #header1 {
     width: 100%;
     height: 150px;
-    margin-top: 20px;
-    background-color: $negro;
-}
+    margin-top: 0px;
 
-.container__header {
-    max-width: 1440px;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
+    .container__header {
+        max-width: 1440px;
+        height: 100%;
+        margin: auto;
+        @include flexible(flex, row, wrap, space-between, center);
 
-.logo {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
+        .logo {
+            height: 100%;
+            @include flexible(flex, row, wrap, flex-start, center);
 
-.logo h1 {
-    display: none;
-}
+            h1 {
+                display: none;
+            }
 
-.logo img {
-    width: 125px;
-}
+            img {
+                width: 125px;
+            }
+        }
 
-nav {
-    line-height: 50px;
-}
+        nav {
+            line-height: 50px;
 
-nav a {
-    color: #FFFFFF;
-    font-family: "Inter-SemiBold";
-    font-size: 18px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 15px;
-    transition: 100ms;
-}
+            a {
+                color: #FFFFFF;
+                font-family: "Inter-SemiBold";
+                font-size: 18px;
+                text-decoration: none;
+                display: inline-block;
+                padding: 10px 15px;
+                transition: 100ms;
+            }
 
-nav a:hover {
-    text-decoration: underline;
-    color: $negro;
-    background-color: #FFFFFF;
-    border-radius: 50px;
-}
+            a:hover {
+                text-decoration: underline;
+                color: #3e3f43;
+                background-color: #FFFFFF;
+                border-radius: 50px;
+            }
 
-.home-header {
-    width: 100%;
-    height: 200px;
-}
-
-.home-header h1 {
-    display: none;
-}
-
-.burger {
-    display: none;
+            .burger {
+                display: none;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1200px) {
 
     #header1 {
         margin-top: 1px;
-    }
 
-    .container__header {
-        align-items: center;
-    }
+        .container__header {
+            align-items: center;
 
-    nav a {
-        display: none;
-    }
+            .nav {
+                a {
+                    display: none;
+                }
 
-    #header1 .burger {
-        display: block;
-        fill: #FFFFFF;
+                .burger {
+                    display: block;
+                    fill: #ffffff;
+                }
+            }
+        }
     }
 }
 
@@ -605,7 +603,7 @@ nav a:hover {
 }
 
 .menu-main {
-    background-color: $negro;
+    background-color: #3e3f43;
 }
 
 .menu-main h1 {
@@ -634,7 +632,8 @@ nav a:hover {
     margin-top: 70px;
 }
 
-@each $name-color, $color in $colors {
+@each $name-color,
+$color in $colors {
     .menu-title--#{$name-color} p {
         color: $color;
         font-size: 24px;
@@ -646,7 +645,7 @@ nav a:hover {
 }
 
 .menu-container {
-    @include flexible( flex, row , wrap , space-evenly , center );
+    @include flexible(flex, row, wrap, space-evenly, center);
     max-width: 1440px;
     margin: 0px auto;
     gap: 50px;

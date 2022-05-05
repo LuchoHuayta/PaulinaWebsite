@@ -173,25 +173,25 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
-.section1 .text h3 {
+.section1 .cover .text h3 {
   font-family: "LibreBaskerville-Bold";
   color: #1db8de;
   font-size: 24px;
 }
 
-.section1 .text h2 {
+.section1 .cover .text h2 {
   font-family: "LibreBaskerville-Bold";
   color: #3e3f43;
   font-size: 90px;
 }
 
-.section1 .text p {
+.section1 .cover .text p {
   color: #3e3f43;
   font-size: 26px;
   font-family: "LibreBaskerville-Regular";
 }
 
-.section1 .text input {
+.section1 .cover .text input {
   padding: 10px 40px;
   border: none;
   border-radius: 40px;
@@ -206,16 +206,16 @@ body::-webkit-scrollbar-thumb {
   transition: all 300ms;
 }
 
-.section1 .text input:hover {
+.section1 .cover .text input:hover {
   -webkit-box-shadow: 1px 1px 30px -6px #5AEBFF;
           box-shadow: 1px 1px 30px -6px #5AEBFF;
 }
 
-.section1 .pic img {
+.section1 .cover .pic img {
   width: 500px;
 }
 
-.section1 .pic img:hover {
+.section1 .cover .pic img:hover {
   -webkit-animation: spin 20s linear infinite;
           animation: spin 20s linear infinite;
 }
@@ -239,19 +239,19 @@ body::-webkit-scrollbar-thumb {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .section1 .text h2 {
+  .section1 .cover .text h2 {
     font-size: 60px;
   }
-  .section1 .text h3 {
+  .section1 .cover .text h3 {
     font-size: 20px;
   }
-  .section1 .text p {
+  .section1 .cover .text p {
     display: none;
   }
-  .section1 .text input {
+  .section1 .cover .text input {
     margin-top: 10px;
   }
-  .section1 .pic img {
+  .section1 .cover .pic img {
     width: 400px;
   }
 }
@@ -266,6 +266,10 @@ body::-webkit-scrollbar-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -298,38 +302,46 @@ body::-webkit-scrollbar-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.section3 .text {
+.section3 .cover .pic img {
+  width: 500px;
+}
+
+.section3 .cover .text {
   max-width: 500px;
   text-align: center;
 }
 
-.section3 .text h3 {
+.section3 .cover .text h3 {
   font-family: "LibreBaskerville-Bold";
   color: #FF784E;
   font-size: 24px;
 }
 
-.section3 .text h2 {
+.section3 .cover .text h2 {
   font-family: "LibreBaskerville-Bold";
   color: #3e3f43;
   font-size: 90px;
 }
 
-.section3 .text p {
+.section3 .cover .text p {
   color: #3e3f43;
   font-size: 26px;
   font-family: "LibreBaskerville-Regular";
 }
 
-.section3 .text input {
+.section3 .cover .text input {
   padding: 10px 40px;
   border: none;
   border-radius: 40px;
@@ -344,18 +356,9 @@ body::-webkit-scrollbar-thumb {
   transition: all 300ms;
 }
 
-.section3 .text input:hover {
+.section3 .cover .text input:hover {
   -webkit-box-shadow: 1px 1px 30px -6px #fabaa6;
           box-shadow: 1px 1px 30px -6px #fabaa6;
-}
-
-.section3 .pic img {
-  width: 500px;
-}
-
-.section3 .pic img:hover {
-  -webkit-animation: spin 20s linear infinite;
-          animation: spin 20s linear infinite;
 }
 
 @keyframes spin {
@@ -374,20 +377,20 @@ body::-webkit-scrollbar-thumb {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .section3 .text h2 {
+  .section3 .cover .pic img {
+    width: 400px;
+  }
+  .section3 .cover .text h2 {
     font-size: 60px;
   }
-  .section3 .text h3 {
+  .section3 .cover .text h3 {
     font-size: 20px;
   }
-  .section3 .text p {
+  .section3 .cover .text p {
     display: none;
   }
-  .section3 .text input {
+  .section3 .cover .text input {
     margin-top: 10px;
-  }
-  .section3 .pic img {
-    width: 400px;
   }
 }
 
@@ -407,38 +410,42 @@ body::-webkit-scrollbar-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.section5 .text {
+.section5 .cover .text {
   max-width: 500px;
   text-align: center;
 }
 
-.section5 .text h3 {
+.section5 .cover .text h3 {
   font-family: "LibreBaskerville-Bold";
   color: #FFD84E;
   font-size: 24px;
 }
 
-.section5 .text h2 {
+.section5 .cover .text h2 {
   font-family: "LibreBaskerville-Bold";
   color: #3e3f43;
   font-size: 90px;
 }
 
-.section5 .text p {
+.section5 .cover .text p {
   color: #3e3f43;
   font-size: 26px;
   font-family: "LibreBaskerville-Regular";
 }
 
-.section5 .text input {
+.section5 .cover .text input {
   padding: 10px 40px;
   border: none;
   border-radius: 40px;
@@ -453,18 +460,13 @@ body::-webkit-scrollbar-thumb {
   transition: all 300ms;
 }
 
-.section5 .text input:hover {
+.section5 .cover .text input:hover {
   -webkit-box-shadow: 1px 1px 30px -6px #ffeca7;
           box-shadow: 1px 1px 30px -6px #ffeca7;
 }
 
-.section5 .pic img {
+.section5 .cover .pic img {
   width: 500px;
-}
-
-.section5 .pic img:hover {
-  -webkit-animation: spin 20s linear infinite;
-          animation: spin 20s linear infinite;
 }
 
 @keyframes spin {
@@ -483,19 +485,19 @@ body::-webkit-scrollbar-thumb {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .section5 .text h2 {
+  .section5 .cover .text h2 {
     font-size: 60px;
   }
-  .section5 .text h3 {
+  .section5 .cover .text h3 {
     font-size: 20px;
   }
-  .section5 .text p {
+  .section5 .cover .text p {
     display: none;
   }
-  .section5 .text input {
+  .section5 .cover .text input {
     margin-top: 10px;
   }
-  .section5 .pic img {
+  .section5 .cover .pic img {
     width: 400px;
   }
 }
@@ -507,17 +509,7 @@ footer {
   width: 100%;
 }
 
-h6 {
-  color: #FFFFFF;
-  font-size: small;
-}
-
-footer a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.footer-container {
+footer .footer-container {
   width: 75%;
   margin: auto;
   color: #FFFFFF;
@@ -526,20 +518,42 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-family: "Inter-SemiBold";
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-size: small;
 }
 
-.footer-container div {
+footer .footer-container div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .footer-container div h6 {
+  color: #FFFFFF;
+  font-size: small;
+}
+
+footer .footer-container div a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 /*FOOTER--END*/
@@ -547,45 +561,58 @@ footer a {
 #header1 {
   width: 100%;
   height: 150px;
-  margin-top: 20px;
-  background-color: #3e3f43;
+  margin-top: 0px;
 }
 
-.container__header {
+#header1 .container__header {
   max-width: 1440px;
   height: 100%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.logo {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.logo h1 {
+#header1 .container__header .logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header1 .container__header .logo h1 {
   display: none;
 }
 
-.logo img {
+#header1 .container__header .logo img {
   width: 125px;
 }
 
-nav {
+#header1 .container__header nav {
   line-height: 50px;
 }
 
-nav a {
+#header1 .container__header nav a {
   color: #FFFFFF;
   font-family: "Inter-SemiBold";
   font-size: 18px;
@@ -596,23 +623,14 @@ nav a {
   transition: 100ms;
 }
 
-nav a:hover {
+#header1 .container__header nav a:hover {
   text-decoration: underline;
   color: #3e3f43;
   background-color: #FFFFFF;
   border-radius: 50px;
 }
 
-.home-header {
-  width: 100%;
-  height: 200px;
-}
-
-.home-header h1 {
-  display: none;
-}
-
-.burger {
+#header1 .container__header nav .burger {
   display: none;
 }
 
@@ -620,17 +638,17 @@ nav a:hover {
   #header1 {
     margin-top: 1px;
   }
-  .container__header {
+  #header1 .container__header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  nav a {
+  #header1 .container__header .nav a {
     display: none;
   }
-  #header1 .burger {
+  #header1 .container__header .nav .burger {
     display: block;
-    fill: #FFFFFF;
+    fill: #ffffff;
   }
 }
 
@@ -663,6 +681,24 @@ nav a:hover {
 
 .menu-title--destacado p {
   color: #FFFFFF;
+  font-size: 24px;
+  font-family: "LibreBaskerville-Bold";
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+.menu-title--logo p {
+  color: #1db8de;
+  font-size: 24px;
+  font-family: "LibreBaskerville-Bold";
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+.menu-title--negro p {
+  color: #3e3f43;
   font-size: 24px;
   font-family: "LibreBaskerville-Bold";
   text-align: center;
