@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -439,6 +440,12 @@ body::-webkit-scrollbar-thumb {
   font-size: 90px;
 }
 
+.section5 .cover .text h2 span:before {
+  content: '';
+  -webkit-animation: customChaufa infinite 8s;
+          animation: customChaufa infinite 8s;
+}
+
 .section5 .cover .text p {
   color: #3e3f43;
   font-size: 26px;
@@ -472,6 +479,48 @@ body::-webkit-scrollbar-thumb {
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes customChaufa {
+  0% {
+    content: 'de Pollo';
+  }
+  20% {
+    content: 'de Carne';
+  }
+  40% {
+    content: 'de Camarón';
+  }
+  60% {
+    content: 'de Mariscos';
+  }
+  80% {
+    content: 'Veggie';
+  }
+  100% {
+    content: 'Mixto';
+  }
+}
+
+@keyframes customChaufa {
+  0% {
+    content: 'de Pollo';
+  }
+  20% {
+    content: 'de Carne';
+  }
+  40% {
+    content: 'de Camarón';
+  }
+  60% {
+    content: 'de Mariscos';
+  }
+  80% {
+    content: 'Veggie';
+  }
+  100% {
+    content: 'Mixto';
   }
 }
 

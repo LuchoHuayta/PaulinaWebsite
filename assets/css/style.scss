@@ -400,6 +400,11 @@ body::-webkit-scrollbar-thumb {
                 font-family: "LibreBaskerville-Bold";
                 color: #3e3f43;
                 font-size: 90px;
+
+                span:before {
+                    content: '';
+                    animation: customChaufa infinite 8s;
+                }
             }
 
             p {
@@ -436,6 +441,27 @@ body::-webkit-scrollbar-thumb {
 @keyframes spin {
     100% {
         -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes customChaufa {
+    0% {
+        content: 'de Pollo';
+    }
+    20% {
+        content: 'de Carne';
+    }
+    40% {
+        content: 'de Camarón';
+    }
+    60% {
+        content: 'de Mariscos';
+    }
+    80% {
+        content: 'Veggie';
+    }
+    100% {
+        content: 'Mixto';
     }
 }
 
