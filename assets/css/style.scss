@@ -4,15 +4,32 @@
     box-sizing: border-box;
 }
 
+$colors: (
+    logo: #1db8de,
+    negro: #3e3f43,
+    pollo: #FFD84E,
+    carne: #FF784E,
+    pescado: #FF9EF0,
+    mariscos: #5AEBFF,
+    veggie: #A4FF84,
+);
+
+@mixin flexible( $dis , $direccion , $corte , $just , $align) {
+    display: $dis;
+    flex-flow: $direccion $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+
 body::-webkit-scrollbar {
     width: 8px;
-    background-color: #3e3f43;
+    background-color: $negro;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #FFFFFF;
     border-radius: 10px;
-    border-right: 1px solid #3e3f43;
+    border-right: 1px solid $negro;
 }
 
 @font-face {
@@ -38,7 +55,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #menu__body {
-    background-color: #3e3f43;
+    background-color: $negro;
 }
 
 @media screen and (max-width: 1200px) {
@@ -52,19 +69,17 @@ body::-webkit-scrollbar-thumb {
 #header2 {
     width: 100%;
     height: 150px;
-    margin-top: 20px;
+    margin-top: 0px;
 
     .container__header {
         max-width: 1440px;
         height: 100%;
         margin: auto;
-        display: flex;
-        justify-content: space-between;
+        @include flexible( flex , row , wrap , space-between , center );
 
         .logo {
             height: 100%;
-            display: flex;
-            align-items: center;
+            @include flexible( flex , row , wrap , flex-start , center );
 
             h1 {
                 display: none;
@@ -90,7 +105,7 @@ body::-webkit-scrollbar-thumb {
 
             a:hover {
                 text-decoration: underline;
-                color: #3e3f43;
+                color: $negro;
                 background-color: #FFFFFF;
                 border-radius: 50px;
             }
@@ -117,7 +132,7 @@ body::-webkit-scrollbar-thumb {
                 
                 .burger {
                     display: block;
-                    fill: #3e3f43;
+                    fill: $negro;
                 }
             }
         }
@@ -136,9 +151,7 @@ body::-webkit-scrollbar-thumb {
         max-width: 1440px;
         height: 100%;
         margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        @include flexible( flex , row , nowrap , space-evenly , center );
 
         .text {
             max-width: 500px;
@@ -153,18 +166,18 @@ body::-webkit-scrollbar-thumb {
 
 .section1 .text h3 {
     font-family: "LibreBaskerville-Bold";
-    color: #1db8de;
+    color: $logo;
     font-size: 24px;
 }
 
 .section1 .text h2 {
     font-family: "LibreBaskerville-Bold";
-    color: #3e3f43;
+    color: $negro;
     font-size: 90px;
 }
 
 .section1 .text p {
-    color: #3e3f43;
+    color: $negro;
     font-size: 26px;
     font-family: "LibreBaskerville-Regular";
 }
@@ -231,13 +244,11 @@ body::-webkit-scrollbar-thumb {
 /*SECTION2-HOME--START*/
 
 .section2 {
-    background-color: #3e3f43;
+    background-color: $negro;
 }
 
 .section2 .container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flexible( flex , row , nowrap , space-evenly , center );
 }
 
 .section2-img {
@@ -263,9 +274,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 1440px;
     height: 100%;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    @include flexible( flex , row , nowrap , space-evenly , center );
 }
 
 .section3 .text {
@@ -275,18 +284,18 @@ body::-webkit-scrollbar-thumb {
 
 .section3 .text h3 {
     font-family: "LibreBaskerville-Bold";
-    color: #FF784E;
+    color: $carne;
     font-size: 24px;
 }
 
 .section3 .text h2 {
     font-family: "LibreBaskerville-Bold";
-    color: #3e3f43;
+    color: $negro;
     font-size: 90px;
 }
 
 .section3 .text p {
-    color: #3e3f43;
+    color: $negro;
     font-size: 26px;
     font-family: "LibreBaskerville-Regular";
 }
@@ -367,9 +376,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 1440px;
     height: 100%;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    @include flexible( flex , row , nowrap , space-evenly , center );
 }
 
 .section5 .text {
@@ -379,18 +386,18 @@ body::-webkit-scrollbar-thumb {
 
 .section5 .text h3 {
     font-family: "LibreBaskerville-Bold";
-    color: #FFD84E;
+    color: $pollo;
     font-size: 24px;
 }
 
 .section5 .text h2 {
     font-family: "LibreBaskerville-Bold";
-    color: #3e3f43;
+    color: $negro;
     font-size: 90px;
 }
 
 .section5 .text p {
-    color: #3e3f43;
+    color: $negro;
     font-size: 26px;
     font-family: "LibreBaskerville-Regular";
 }
@@ -401,7 +408,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 40px;
     margin-top: 40px;
     background: linear-gradient(to right, #ffeca7, #FFD84E);
-    color: #3e3f43;
+    color: $negro;
     box-shadow: 1px 1px 30px -12px #ffeca7;
     cursor: pointer;
     transition: all 300ms;
@@ -461,7 +468,7 @@ body::-webkit-scrollbar-thumb {
 /*FOOTER--START*/
 
 footer {
-    background-color: #3e3f43;
+    background-color: $negro;
     width: 100%;
 }
 
@@ -481,18 +488,17 @@ footer a {
     color: #FFFFFF;
     padding-top: 25px;
     padding-bottom: 25px;
-    display: flex;
-    justify-content: space-around;
-    font-family: "Inter-SemiBold";
+    @include flexible( flex , row , nowrap , space-around , flex-start );
     font-size: small;
 }
 
 .footer-container div {
-    display: flex;
-    flex-direction: column;
+    @include flexible( flex , column , nowrap , flex-start , flex-start );
 }
 
 /*FOOTER--END*/
+
+
 
 /*HEADER-MENU--START*/
 
@@ -500,7 +506,7 @@ footer a {
     width: 100%;
     height: 150px;
     margin-top: 20px;
-    background-color: #3e3f43;
+    background-color: $negro;
 }
 
 .container__header {
@@ -541,7 +547,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #3e3f43;
+    color: $negro;
     background-color: #FFFFFF;
     border-radius: 50px;
 }
@@ -599,7 +605,7 @@ nav a:hover {
 }
 
 .menu-main {
-    background-color: #3e3f43;
+    background-color: $negro;
 }
 
 .menu-main h1 {
@@ -628,56 +634,19 @@ nav a:hover {
     margin-top: 70px;
 }
 
-.menu-title--pollo p {
-    color: #FFD84E;
-    font-size: 24px;
-    font-family: "LibreBaskerville-Bold";
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 70px;
-}
-
-.menu-title--carne p {
-    color: #FF784E;
-    font-size: 24px;
-    font-family: "LibreBaskerville-Bold";
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 70px;
-}
-
-.menu-title--pescado p {
-    color: #FF9EF0;
-    font-size: 24px;
-    font-family: "LibreBaskerville-Bold";
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 70px;
-}
-
-.menu-title--mariscos p {
-    color: #5AEBFF;
-    font-size: 24px;
-    font-family: "LibreBaskerville-Bold";
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 70px;
-}
-
-.menu-title--veggie p {
-    color: #A4FF84;
-    font-size: 24px;
-    font-family: "LibreBaskerville-Bold";
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 70px;
+@each $name-color, $color in $colors {
+    .menu-title--#{$name-color} p {
+        color: $color;
+        font-size: 24px;
+        font-family: "LibreBaskerville-Bold";
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 70px;
+    }
 }
 
 .menu-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flexible( flex, row , wrap , space-evenly , center );
     max-width: 1440px;
     margin: 0px auto;
     gap: 50px;
