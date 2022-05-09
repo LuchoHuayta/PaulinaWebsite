@@ -57,6 +57,10 @@ body::-webkit-scrollbar-thumb {
     background-color: #3e3f43;
 }
 
+#all__body {
+    background-color: #FFFFFF;
+}
+
 @media screen and (max-width: 1200px) {
     #index__body {
         background: none;
@@ -611,18 +615,7 @@ footer {
 
 /*HEADER-MENU--END*/
 
-
-
-
-
-
-
-
-
-
-/*A partir de aca codigo para reordenar, es todo sobre menu.html con flex y grid*/
-
-
+/*MAIN-MENU--START*/
 
 .menu-section {
     padding-bottom: 100px;
@@ -719,5 +712,21 @@ $color in $colors {
         grid-template-columns: auto;
         justify-content: center;
         margin: 0px auto;
+    }
+}
+
+/*MAIN-MENU--END*/
+
+/*NOSOTROS-START*/
+
+#all_body {
+    #header1 {
+        .container__header {
+            nav {
+                a {
+                    color: #3e3f43;
+                }
+            }
+        }
     }
 }
