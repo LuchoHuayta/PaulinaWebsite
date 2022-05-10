@@ -1060,4 +1060,13 @@ footer .footer-container div a {
   margin-right: 15px;
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .blog-main article {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/*BLOG-MAIN--END*/
 /*# sourceMappingURL=style.css.map */

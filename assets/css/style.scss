@@ -385,7 +385,7 @@ body::-webkit-scrollbar-thumb {
             font-size: medium;
             color: #FFFFFF;
             padding: 10px;
-            
+
         }
     }
 }
@@ -870,8 +870,15 @@ $color in $colors {
             }
         }
     }
-
-
-
-    
 }
+
+@media screen and (max-width: 1200px) {
+    .blog-main {
+        article {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+
+/*BLOG-MAIN--END*/
