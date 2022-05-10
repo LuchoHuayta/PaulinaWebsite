@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-$colors: (logo: #1db8de,
+$colors: (
+    logo: #1db8de,
     negro: #3e3f43,
     pollo: #FFD84E,
     carne: #FF784E,
@@ -376,6 +377,21 @@ body::-webkit-scrollbar-thumb {
 
 /*SECTION3-HOME--END*/
 
+/*SECTION4*/
+
+.section2 {
+    div {
+        p {
+            font-size: medium;
+            color: #FFFFFF;
+            padding: 10px;
+            
+        }
+    }
+}
+
+/*SECTION4*/
+
 /*SECTION5-HOME--START*/
 
 .section5 {
@@ -452,18 +468,23 @@ body::-webkit-scrollbar-thumb {
     0% {
         content: 'de Pollo';
     }
+
     20% {
         content: 'de Carne';
     }
+
     40% {
         content: 'de Camarón';
     }
+
     60% {
         content: 'de Mariscos';
     }
+
     80% {
         content: 'Veggie';
     }
+
     100% {
         content: 'Mixto';
     }
@@ -481,12 +502,15 @@ body::-webkit-scrollbar-thumb {
                 h2 {
                     font-size: 60px;
                 }
+
                 h3 {
                     font-size: 20px;
                 }
+
                 p {
                     display: none;
                 }
+
                 input {
                     margin-top: 10px;
                 }
@@ -642,15 +666,6 @@ footer {
     margin-bottom: 100px;
 }
 
-.menu-title--destacado p {
-    color: #FFFFFF;
-    font-size: 24px;
-    font-family: "LibreBaskerville-Bold";
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 70px;
-}
-
 @each $name-color,
 $color in $colors {
     .menu-title--#{$name-color} p {
@@ -717,16 +732,146 @@ $color in $colors {
 
 /*MAIN-MENU--END*/
 
-/*NOSOTROS-START*/
+/*NOSOTROS-HEADER--START*/
 
-#all_body {
-    #header1 {
-        .container__header {
-            nav {
-                a {
-                    color: #3e3f43;
-                }
+#header3 {
+    width: 100%;
+    height: 150px;
+    margin-top: 0px;
+
+    .container__header {
+        max-width: 1440px;
+        height: 100%;
+        margin: auto;
+        @include flexible(flex, row, wrap, space-between, center);
+
+        .logo {
+            height: 100%;
+            @include flexible(flex, row, wrap, flex-start, center);
+
+            h1 {
+                display: none;
+            }
+
+            img {
+                width: 125px;
+            }
+        }
+
+        nav {
+            line-height: 50px;
+
+            a {
+                color: #3e3f43;
+                font-family: "Inter-SemiBold";
+                font-size: 18px;
+                text-decoration: none;
+                display: inline-block;
+                padding: 10px 15px;
+                transition: 100ms;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: #3e3f43;
+                background-color: #FFFFFF;
+                border-radius: 50px;
+            }
+
+            .burger {
+                display: none;
             }
         }
     }
+}
+
+/*NOSOTROS-HEADER--START*/
+
+.nosotros-main {
+    section {
+        max-width: 1200px;
+        margin: auto;
+
+        h1 {
+            color: #3e3f43;
+            text-align: center;
+            font-size: 80px;
+            font-family: "LibreBaskerville-Bold";
+            text-transform: uppercase;
+            padding-bottom: 25px;
+        }
+
+        h2 {
+            color: #3e3f43;
+            text-align: center;
+            font-size: 24px;
+            font-family: "LibreBaskerville-Bold";
+            margin-bottom: 50px;
+        }
+
+        .mapa {
+            @include flexible( flex , row , wrap , center , center );
+            margin-bottom: 20px;
+        }
+
+        .team {
+            @include flexible( flex , row , wrap , space-between , center );
+
+            p {
+                color: #3e3f43;
+                font-size: 26px;
+                font-family: "LibreBaskerville-Regular";
+                width: 50%;
+            }
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+}
+
+/*BLOG-MAIN--START*/
+
+.blog-main {
+    max-width: 1100px;
+    margin: auto;
+
+    h1 {
+        color: #3e3f43;
+        text-align: center;
+        font-size: 80px;
+        font-family: "LibreBaskerville-Bold";
+        text-transform: uppercase;
+        padding-bottom: 25px;
+    }
+
+    article {
+        margin-top: 25px;
+        margin-bottom: 50px;
+
+        h2 {
+            color: #3e3f43;
+            font-size: 32px;
+            font-family: "LibreBaskerville-Bold";
+        }
+    
+        p {
+            color: #3e3f43;
+            font-size: 18px;
+            font-family: "LibreBaskerville-Regular";
+        }
+
+        div {
+            img {
+                float: left;
+                margin-right: 15px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+
+    
 }

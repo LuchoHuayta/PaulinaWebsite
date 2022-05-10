@@ -400,6 +400,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*SECTION3-HOME--END*/
+/*SECTION4*/
+.section2 div p {
+  font-size: medium;
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+/*SECTION4*/
 /*SECTION5-HOME--START*/
 .section5 {
   width: 100%;
@@ -732,15 +740,6 @@ footer .footer-container div a {
   margin-bottom: 100px;
 }
 
-.menu-title--destacado p {
-  color: #FFFFFF;
-  font-size: 24px;
-  font-family: "LibreBaskerville-Bold";
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 70px;
-}
-
 .menu-title--logo p {
   color: #1db8de;
   font-size: 24px;
@@ -880,8 +879,185 @@ footer .footer-container div a {
 }
 
 /*MAIN-MENU--END*/
-/*NOSOTROS-START*/
-#all_body #header1 .container__header nav a {
+/*NOSOTROS-HEADER--START*/
+#header3 {
+  width: 100%;
+  height: 150px;
+  margin-top: 0px;
+}
+
+#header3 .container__header {
+  max-width: 1440px;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header3 .container__header .logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header3 .container__header .logo h1 {
+  display: none;
+}
+
+#header3 .container__header .logo img {
+  width: 125px;
+}
+
+#header3 .container__header nav {
+  line-height: 50px;
+}
+
+#header3 .container__header nav a {
   color: #3e3f43;
+  font-family: "Inter-SemiBold";
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 15px;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+#header3 .container__header nav a:hover {
+  text-decoration: underline;
+  color: #3e3f43;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+}
+
+#header3 .container__header nav .burger {
+  display: none;
+}
+
+/*NOSOTROS-HEADER--START*/
+.nosotros-main section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nosotros-main section h1 {
+  color: #3e3f43;
+  text-align: center;
+  font-size: 80px;
+  font-family: "LibreBaskerville-Bold";
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.nosotros-main section h2 {
+  color: #3e3f43;
+  text-align: center;
+  font-size: 24px;
+  font-family: "LibreBaskerville-Bold";
+  margin-bottom: 50px;
+}
+
+.nosotros-main section .mapa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.nosotros-main section .team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nosotros-main section .team p {
+  color: #3e3f43;
+  font-size: 26px;
+  font-family: "LibreBaskerville-Regular";
+  width: 50%;
+}
+
+.nosotros-main section .team img {
+  width: 50%;
+}
+
+/*BLOG-MAIN--START*/
+.blog-main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.blog-main h1 {
+  color: #3e3f43;
+  text-align: center;
+  font-size: 80px;
+  font-family: "LibreBaskerville-Bold";
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.blog-main article {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.blog-main article h2 {
+  color: #3e3f43;
+  font-size: 32px;
+  font-family: "LibreBaskerville-Bold";
+}
+
+.blog-main article p {
+  color: #3e3f43;
+  font-size: 18px;
+  font-family: "LibreBaskerville-Regular";
+}
+
+.blog-main article div img {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */
