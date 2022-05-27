@@ -113,37 +113,68 @@ body::-webkit-scrollbar-thumb {
   font-size: 18px;
   text-decoration: none;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 0px 5px;
+  margin: 0 10px;
   -webkit-transition: 100ms;
   transition: 100ms;
+  position: relative;
 }
 
-#header2 .container__header nav a:hover {
-  text-decoration: underline;
+#header2 .container__header nav a:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
+}
+
+#header2 .container__header nav a:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+#header2 .container__header #burger {
   color: #3e3f43;
-  background-color: #FFFFFF;
-  border-radius: 50px;
-}
-
-#header2 .container__header nav .burger {
+  font-size: 30px;
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
   display: none;
 }
 
 @media screen and (max-width: 1200px) {
-  #header2 {
-    margin-top: 1px;
-  }
-  #header2 .container__header {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #header2 .container__header .nav a {
-    display: none;
-  }
-  #header2 .container__header .nav .burger {
+  #header2 .container__header #burger {
     display: block;
-    fill: #3e3f43;
+  }
+  #header2 .container__header nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #FFFFFF;
+    top: 120px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+  }
+  #header2 .container__header nav a {
+    display: block;
+    color: #3e3f43;
+  }
+  #header2 .container__header nav.show {
+    left: 0;
   }
 }
 

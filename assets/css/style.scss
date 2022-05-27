@@ -103,45 +103,74 @@ body::-webkit-scrollbar-thumb {
                 font-size: 18px;
                 text-decoration: none;
                 display: inline-block;
-                padding: 10px 15px;
+                padding: 0px 5px;
+                margin: 0 10px;
                 transition: 100ms;
+                position: relative;
             }
 
-            a:hover {
-                text-decoration: underline;
-                color: #3e3f43;
-                background-color: #FFFFFF;
-                border-radius: 50px;
+            a:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                width: 100%;
+                background: white;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform .2s linear;
             }
 
-            .burger {
-                display: none;
+            a:hover:before {
+                transform: scaleX(1);
+                transform-origin: left;
             }
         }
+
+        #burger {
+            color: #3e3f43;
+            font-size: 30px;
+            float: right;
+            margin-right: 20px;
+            cursor: pointer;
+            display: none;
+        }
     }
+
+
+
 }
 
 @media screen and (max-width: 1200px) {
 
     #header2 {
-        margin-top: 1px;
-
         .container__header {
-            align-items: center;
+            #burger {
+                display: block;
+            }
+            nav {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #FFFFFF;
+                top: 120px;
+                left: -100%;
+                text-align: center;
+                transition: all .4s;
 
-            .nav {
                 a {
-                    display: none;
-                }
-
-                .burger {
                     display: block;
-                    fill: #3e3f43;
+                    color: #3e3f43;
                 }
+            }
+            nav.show {
+                left: 0;
             }
         }
     }
 }
+
 
 /*HEADER-HOME--END*/
 
@@ -810,12 +839,12 @@ $color in $colors {
         }
 
         .mapa {
-            @include flexible( flex , row , wrap , center , center );
+            @include flexible(flex, row, wrap, center, center);
             margin-bottom: 20px;
         }
 
         .team {
-            @include flexible( flex , row , wrap , space-between , center );
+            @include flexible(flex, row, wrap, space-between, center);
 
             p {
                 color: #3e3f43;
@@ -855,7 +884,7 @@ $color in $colors {
             font-size: 32px;
             font-family: "LibreBaskerville-Bold";
         }
-    
+
         p {
             color: #3e3f43;
             font-size: 18px;
