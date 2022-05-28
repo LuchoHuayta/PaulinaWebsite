@@ -1262,6 +1262,9 @@ footer .footer-container .autor {
 .blog-main article {
   margin-top: 25px;
   margin-bottom: 50px;
+  background-color: rgba(62, 63, 67, 0.1);
+  border-radius: 15px;
+  padding: 20px;
 }
 
 .blog-main article h2 {
@@ -1274,18 +1277,28 @@ footer .footer-container .autor {
   color: #3e3f43;
   font-size: 18px;
   font-family: "LibreBaskerville-Regular";
+  margin-bottom: 10px;
+}
+
+.blog-main article p span {
+  font-family: "LibreBaskerville-Bold";
 }
 
 .blog-main article div img {
   float: left;
   margin-right: 15px;
   margin-bottom: 10px;
+  width: 300px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
   .blog-main article {
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .blog-main article div img {
+    float: none;
+    width: 100%;
   }
 }
 

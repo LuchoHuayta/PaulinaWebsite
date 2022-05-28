@@ -1031,6 +1031,9 @@ $color in $colors {
     article {
         margin-top: 25px;
         margin-bottom: 50px;
+        background-color: rgba($color: #3e3f43, $alpha: 0.1);
+        border-radius: 15px;
+        padding: 20px;
 
         h2 {
             color: #3e3f43;
@@ -1042,6 +1045,10 @@ $color in $colors {
             color: #3e3f43;
             font-size: 18px;
             font-family: "LibreBaskerville-Regular";
+            margin-bottom: 10px;
+            span {
+                font-family: "LibreBaskerville-Bold";
+            }
         }
 
         div {
@@ -1049,16 +1056,23 @@ $color in $colors {
                 float: left;
                 margin-right: 15px;
                 margin-bottom: 10px;
+                width: 300px;
             }
         }
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
     .blog-main {
         article {
             margin-left: 10px;
             margin-right: 10px;
+            div {
+                img {
+                    float: none;
+                    width: 100%;
+                }
+            }
         }
     }
 }
