@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../assets/css/style.css">
+    <script src="https://kit.fontawesome.com/a7b29f6362.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!--BURGER NAVBAR CON FONTAWESOME ICONS Y JQUERY-->
+    <script>
+        $(document).ready(function () {
+            $('#burger').click(function () {
+                $('nav').toggleClass('show');
+            });
+        });
+    </script>
     <title>Paulina | Blog &#129424;</title>
 </head>
 
@@ -20,14 +31,11 @@
                 <a href="./contacto.html">Contacto</a>
                 <a href="./nosotros.html">Nosotros</a>
                 <a href="./menu.html">Menu</a>
-                <a class="burger" href="./../index.html">
-                    <svg viewBox="0 0 100 80" width="40" height="40">
-                        <rect width="100" height="20" rx="8"></rect>
-                        <rect y="30" width="100" height="20" rx="8"></rect>
-                        <rect y="60" width="100" height="20" rx="8"></rect>
-                    </svg>
-                </a>
             </nav>
+            <!--BURGER NAVBAR CON FONTAWESOME ICONS Y JQUERY-->
+            <label id="burger">
+                <i class="fas fa-bars"></i>
+            </label>
         </div>
     </header>
 
@@ -38,7 +46,21 @@
             <p>22/04/2022</p>
             <div class="article-content">
                 <img class="article-image" src="./../assets/images/shrimp-icon.jpg" width="300px" alt="">
-                <p>Ultra hiper super mega lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste tempora minus dolor adipisci. Omnis quaerat quidem rem perspiciatis at nihil impedit ullam, sit quasi quam recusandae nostrum aspernatur eius doloremque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                <p>Ultra hiper super mega lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste tempora minus
+                    dolor adipisci. Omnis quaerat quidem rem perspiciatis at nihil impedit ullam, sit quasi quam
+                    recusandae nostrum aspernatur eius doloremque. Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                    voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                    magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                    reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem
+                    eum fugiat quo voluptas nulla pariatur? The standard chunk of Lorem Ipsum used since the 1500s is
+                    reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
+                    Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions
+                    from the 1914 translation by H. Rackham.</p>
             </div>
         </article>
         <article>
@@ -46,21 +68,35 @@
             <p>01/05/2022</p>
             <div class="article-content">
                 <img class="article-image" src="./../assets/images/cat-computer.gif" alt="">
-                <p>Ultra hiper super mega lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste tempora minus dolor adipisci. Omnis quaerat quidem rem perspiciatis at nihil impedit ullam, sit quasi quam recusandae nostrum aspernatur eius doloremque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                <p>Ultra hiper super mega lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste tempora minus
+                    dolor adipisci. Omnis quaerat quidem rem perspiciatis at nihil impedit ullam, sit quasi quam
+                    recusandae nostrum aspernatur eius doloremque. Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                    voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+                    magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                    reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem
+                    eum fugiat quo voluptas nulla pariatur? The standard chunk of Lorem Ipsum used since the 1500s is
+                    reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
+                    Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions
+                    from the 1914 translation by H. Rackham.</p>
             </div>
         </article>
     </main>
 
     <footer>
         <div class="footer-container">
-            <div>
+            <div class="normal">
                 <h6>RESTAURANTE</h6>
                 <a href="https://wa.me/message/COWJFNIKICAFM1" target="_blank">WhatsApp 11 6254 4617</a>
                 <a href="#"> Telefono 4784 0754</a>
                 <a href="https://www.google.com/maps/place/Paulina+cocina+de+mar+y+tierra/@-34.5599125,-58.4595747,15z/data=!4m5!3m4!1s0x0:0x1970c9793c94fd9b!8m2!3d-34.5600345!4d-58.4597895"
                     target="_blank">Ciudad de la Paz 2369, local 1</a>
             </div>
-            <div>
+            <div class="normal">
                 <h6>TERCEROS</h6>
                 <a href="https://www.instagram.com/paulinabsas/?hl=es" target="_blank">Instagram</a>
                 <a href="https://www.rappi.com.ar/restaurantes/121385-paulina-cocina-de-mar-y-tierra-palermo-belgrano?utm_source=google&utm_medium=organic&utm_campaign=place-action-link"
@@ -68,7 +104,13 @@
                 <a href="https://www.pedidosya.com.ar/restaurantes/buenos-aires/paulina-cocina-de-mar-y-tierra-menu"
                     target="_blank">Pedidos Ya</a>
             </div>
+            <div class="autor">
+                <img src="./../assets/images/paulina-logo-b&n.png" alt="logo-b&n">
+                <p>Con ♥ por</p>
+                <p>Lucho Huayta</p>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
