@@ -864,10 +864,6 @@ footer .footer-container .autor {
 
 /*HEADER-MENU--END*/
 /*MAIN-MENU--START*/
-.menu-section {
-  padding-bottom: 100px;
-}
-
 .menu-main {
   background-color: #3e3f43;
 }
@@ -887,6 +883,10 @@ footer .footer-container .autor {
   font-size: 20px;
   font-family: "LibreBaskerville-Bold";
   margin-bottom: 100px;
+}
+
+.menu-main .menu-section {
+  padding-bottom: 100px;
 }
 
 .menu-title--logo p {
@@ -952,29 +952,6 @@ footer .footer-container .autor {
   margin-top: 70px;
 }
 
-.menu-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 1440px;
-  margin: 0px auto;
-  gap: 50px;
-}
-
-.menu-container img {
-  margin: 3px;
-}
-
 .menu-container-grid {
   display: -ms-grid;
   display: grid;
@@ -986,6 +963,10 @@ footer .footer-container .autor {
   max-width: 1408px;
   margin: 0px auto;
   gap: 50px;
+}
+
+.menu-container-grid img {
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1381px) {
