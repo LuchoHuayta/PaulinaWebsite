@@ -249,23 +249,15 @@ body::-webkit-scrollbar-thumb {
 
 .section1 .cover .pic img {
   width: 500px;
+  -webkit-transition: -webkit-transform 5s ease-out;
+  transition: -webkit-transform 5s ease-out;
+  transition: transform 5s ease-out;
+  transition: transform 5s ease-out, -webkit-transform 5s ease-out;
 }
 
 .section1 .cover .pic img:hover {
-  -webkit-animation: spin 20s linear infinite;
-          animation: spin 20s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @media screen and (max-width: 1200px) {
@@ -367,6 +359,15 @@ body::-webkit-scrollbar-thumb {
 
 .section3 .cover .pic img {
   width: 500px;
+  -webkit-transition: -webkit-transform 5s ease-out;
+  transition: -webkit-transform 5s ease-out;
+  transition: transform 5s ease-out;
+  transition: transform 5s ease-out, -webkit-transform 5s ease-out;
+}
+
+.section3 .cover .pic img:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .section3 .cover .text {
@@ -410,12 +411,6 @@ body::-webkit-scrollbar-thumb {
 .section3 .cover .text input:hover {
   -webkit-box-shadow: 1px 1px 30px -6px #fabaa6;
           box-shadow: 1px 1px 30px -6px #fabaa6;
-}
-
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -607,55 +602,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section5 .cover .pic img {
-  border-radius: 25%;
   width: 500px;
+  -webkit-transition: -webkit-transform 5s ease-out;
+  transition: -webkit-transform 5s ease-out;
+  transition: transform 5s ease-out;
+  transition: transform 5s ease-out, -webkit-transform 5s ease-out;
 }
 
-@keyframes spin {
+.section5 .cover .pic img:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
   }
 }
 
-@-webkit-keyframes customChaufa {
-  0% {
-    content: 'de Pollo';
-  }
-  20% {
-    content: 'de Carne';
-  }
-  40% {
-    content: 'de Camarón';
-  }
-  60% {
-    content: 'de Mariscos';
-  }
-  80% {
-    content: 'Veggie';
-  }
+@keyframes spin {
   100% {
-    content: 'Mixto';
-  }
-}
-
-@keyframes customChaufa {
-  0% {
-    content: 'de Pollo';
-  }
-  20% {
-    content: 'de Carne';
-  }
-  40% {
-    content: 'de Camarón';
-  }
-  60% {
-    content: 'de Mariscos';
-  }
-  80% {
-    content: 'Veggie';
-  }
-  100% {
-    content: 'Mixto';
+    -webkit-transform: rotate(360deg);
   }
 }
 
